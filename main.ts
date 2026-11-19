@@ -6,8 +6,12 @@
 // it. The house then reads the post from X (its first picture and its text)
 // and hands that dossier to the judge.
 //
-// Run it the way the grader does:
-//   mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
+// The POST.json this repository ships must name the real post before the
+// entry is submitted: the placeholder address is refused by the gate.
+// The post has to be public on X, made inside the bounty's window, and its
+// text must carry make.fun (a link or written out) and/or a tag of
+// @makefunai, plus the entrant's play code. This program prints nothing
+// on success; it only fails loudly when the copy cannot be made.
 
 import { copyFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
